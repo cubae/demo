@@ -1,5 +1,5 @@
 FROM openjdk:8
-RUN ls -al ./build/libs/
+RUN echo `ls -al /home/gradle/src/build/libs/*.jar`
 COPY ./build/libs/demo-*.jar app.jar
 RUN cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime && \
     echo "Asia/Seoul" > /etc/timezone
